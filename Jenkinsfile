@@ -14,8 +14,10 @@ pipeline {
 }
 }
 stage( 'Deploy Server' ) {
+  steps{
   sshagent (credentials: ['Deploy-Privatekey']){
   sh "scp -o StrictHostKeyChecking=no index.html ubuntu@43.201.48.51:/var/www/html/"
+}
 }
 }
          }
