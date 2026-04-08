@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Github Pull') {
       steps {
-        git branch: 'main', url:'https://github.com/jaehwan01101/cicd-test.git'
+        git branch: 'main', credentialsId:'git-private-auth', url:'https://github.com/jaehwan01101/cicd-test.git'
       }
     }
     stage('Docker Image Build') {
