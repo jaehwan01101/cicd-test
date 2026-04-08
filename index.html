@@ -1,104 +1,332 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naver Style Mockup</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KINETIC_CURATOR | STRAT_OS V2.0.30</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#9c9d9d",
+                        "tertiary-container": "#ff8eac",
+                        "surface-container-low": "#f0f1f1",
+                        "primary-dim": "#003cd3",
+                        "tertiary-fixed-dim": "#ff769e",
+                        "surface-bright": "#f6f6f6",
+                        "background": "#f6f6f6",
+                        "on-primary-container": "#001867",
+                        "surface-dim": "#d2d5d5",
+                        "tertiary": "#b60055",
+                        "surface": "#f6f6f6",
+                        "surface-tint": "#0846ed",
+                        "surface-container": "#e7e8e8",
+                        "on-tertiary": "#ffeff1",
+                        "error-container": "#f74b6d",
+                        "secondary-dim": "#435600",
+                        "on-secondary-fixed": "#354500",
+                        "on-tertiary-fixed-variant": "#760035",
+                        "tertiary-fixed": "#ff8eac",
+                        "secondary-container": "#c3f400",
+                        "secondary-fixed-dim": "#b7e500",
+                        "on-secondary-fixed-variant": "#4e6300",
+                        "primary-fixed": "#859aff",
+                        "on-surface-variant": "#5a5c5c",
+                        "secondary-fixed": "#c3f400",
+                        "on-primary": "#f2f1ff",
+                        "outline-variant": "#acadad",
+                        "surface-container-highest": "#dbdddd",
+                        "on-secondary-container": "#455900",
+                        "on-background": "#2d2f2f",
+                        "on-tertiary-fixed": "#380015",
+                        "surface-variant": "#dbdddd",
+                        "inverse-surface": "#0c0f0f",
+                        "on-surface": "#2d2f2f",
+                        "on-secondary": "#e1ff88",
+                        "error": "#b41340",
+                        "on-error": "#ffefef",
+                        "on-error-container": "#510017",
+                        "primary-fixed-dim": "#718bff",
+                        "tertiary-dim": "#a0004a",
+                        "primary-container": "#859aff",
+                        "outline": "#757777",
+                        "error-dim": "#a70138",
+                        "primary": "#0846ed",
+                        "on-tertiary-container": "#66002d",
+                        "surface-container-high": "#e1e3e3"
+                    },
+                    fontFamily: {
+                        headline: ["Space Grotesk", "sans-serif"],
+                        body: ["Plus Jakarta Sans", "sans-serif"],
+                        label: ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0rem",
+                        lg: "0rem",
+                        xl: "0rem",
+                        full: "9999px"
+                    }
+                }
+            }
+        };
+    </script>
     <style>
-        /* 기본 초기화 */
-        body, h1, h2, p, ul, li { margin: 0; padding: 0; list-style: none; }
-        body { background-color: #f5f6f7; font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif; color: #333; }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+            vertical-align: middle;
+        }
 
-        /* 헤더 섹션 */
-        header { background-color: #fff; border-bottom: 1px solid #ebebeb; padding: 20px 0; }
-        .container { width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-        
-        .logo { font-size: 32px; font-weight: bold; color: #03cf5d; text-decoration: none; }
-        
-        .search-bar { width: 500px; height: 45px; border: 2px solid #03cf5d; display: flex; align-items: center; padding: 0 15px; border-radius: 2px; }
-        .search-bar input { border: none; width: 100%; outline: none; font-size: 16px; }
+        .neo-shadow {
+            box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+        }
 
-        /* 네비게이션 */
-        nav { background-color: #fff; border-bottom: 1px solid #ebebeb; }
-        nav .container { justify-content: flex-start; gap: 20px; padding: 15px 0; }
-        nav a { text-decoration: none; color: #000; font-weight: bold; font-size: 15px; }
-        nav a:hover { color: #03cf5d; }
+        .sticker-rotate-1 {
+            transform: rotate(-2deg);
+        }
 
-        /* 메인 영역 */
-        main { display: flex; width: 1080px; margin: 20px auto; gap: 20px; }
-        
-        .content-left { flex: 2; }
-        .content-right { flex: 1; }
+        .sticker-rotate-2 {
+            transform: rotate(3deg);
+        }
 
-        .card { background: #fff; border: 1px solid #ebebeb; padding: 20px; border-radius: 4px; margin-bottom: 20px; }
-        .card h2 { font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #03cf5d; display: inline-block; }
-
-        /* 로그인 박스 (오른쪽) */
-        .login-box { text-align: center; }
-        .login-btn { background-color: #03cf5d; color: #fff; display: block; padding: 15px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 10px; }
-
-        /* 푸터 */
-        footer { text-align: center; padding: 40px 0; color: #888; font-size: 13px; }
+        .sticker-rotate-3 {
+            transform: rotate(-1.5deg);
+        }
     </style>
 </head>
-<body>
-
-    <header>
-        <div class="container">
-            <a href="#" class="logo">NAVER</a>
-            <div class="search-bar">
-                <input type="text" placeholder="검색어를 입력해 주세요.">
+<body class="bg-background font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+    <nav class="fixed top-0 z-50 flex h-20 w-full items-center justify-between border-b-4 border-black bg-white px-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-zinc-900">
+        <div class="flex items-center gap-8">
+            <span class="font-headline text-3xl font-black italic tracking-tighter text-blue-700 dark:text-blue-500">KINETIC_CURATOR</span>
+            <div class="hidden items-center gap-6 md:flex">
+                <a class="border-b-4 border-blue-700 pb-1 font-headline font-bold uppercase tracking-tight text-blue-700 dark:border-blue-400 dark:text-blue-400" href="#">Dashboard</a>
+                <a class="font-headline font-bold uppercase tracking-tight text-black opacity-80 transition-colors duration-100 hover:bg-lime-400 hover:text-black dark:text-white" href="#">Network</a>
+                <a class="font-headline font-bold uppercase tracking-tight text-black opacity-80 transition-colors duration-100 hover:bg-lime-400 hover:text-black dark:text-white" href="#">Ventures</a>
             </div>
-            <div style="width: 100px;"></div> </div>
-    </header>
-
-    <nav>
-        <div class="container">
-            <a href="#">메일</a>
-            <a href="#">카페</a>
-            <a href="#">블로그</a>
-            <a href="#">쇼핑</a>
-            <a href="#">뉴스</a>
-            <a href="#">증권</a>
-            <a href="#">지도</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="border-2 border-transparent p-2 transition-all hover:border-black hover:bg-lime-400">
+                <span class="material-symbols-outlined">bolt</span>
+            </button>
+            <button class="border-2 border-transparent p-2 transition-all hover:border-black hover:bg-lime-400">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div class="h-10 w-10 overflow-hidden border-2 border-black">
+                <img
+                    alt="User Profile Avatar"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZJ1M6J1inFHfAWZx3xJ3mtBOhhTV_Q8R-9xXmjKIAhSwTWuuPwSwvOaQCrpaJ8FYevrLfASNW87MKEjviOEwvTUZ4Ie-prL9eQwLpy8ysY5esJ1ZzFwuHX40qlMOjDomfODfwcvMFTC3dAXbrzoLdiPVZ46O5_jMY0yQYBjT3YJ1Cb35Z9nr6c-4tAFB3vGVniI2qDak3rQWzsEKfJgLlVJHhx-M24Ud_uSDd3UUaYvU_02f1Q9SPzZ9xfZOHuZcQGyBkPStCKEzt"
+                />
+            </div>
         </div>
     </nav>
 
-    <main>
-        <div class="content-left">
-            <div class="card">
-                <h2>DOCKER test</h2>
-                <p>CI/CD 배포 성공을 축하드립니다! 이제 이 화면은 젠킨스가 자동으로 배포한 화면입니다.</p>
-                <ul style="margin-top: 10px; line-height: 2;">
-                    <li>• 실시간 배포 파이프라인 구축 완료</li>
-                    <li>• Jenkins와 GitHub Webhook 연동 성공</li>
-                    <li>• SSH Agent를 통한 보안 전송 구현</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2>오늘의 날씨</h2>
-                <p>배포하기 딱 좋은 날씨입니다. ☀️</p>
+    <aside class="fixed left-0 top-20 z-40 hidden h-[calc(100vh-80px)] w-64 flex-col space-y-4 border-r-4 border-black bg-[#f6f6f6] p-4 dark:border-white dark:bg-zinc-950 md:flex">
+        <div class="mb-6">
+            <h2 class="font-headline text-xl font-black text-black dark:text-white">STRAT_OS</h2>
+            <span class="font-headline text-[10px] font-bold uppercase tracking-widest opacity-60">V2.0.30</span>
+        </div>
+        <nav class="flex flex-1 flex-col gap-2">
+            <a class="flex scale-105 rotate-[-2deg] items-center gap-3 bg-lime-400 p-3 font-headline text-xs font-bold uppercase tracking-widest text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-transform duration-75" href="#">
+                <span class="material-symbols-outlined">trending_up</span>
+                Growth
+            </a>
+            <a class="flex items-center gap-3 border-2 border-black bg-white p-3 font-headline text-xs font-bold uppercase tracking-widest text-black transition-all hover:rotate-2 hover:bg-pink-500 hover:text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-white" href="#">
+                <span class="material-symbols-outlined">electric_bolt</span>
+                Vibe
+            </a>
+            <a class="flex items-center gap-3 border-2 border-black bg-white p-3 font-headline text-xs font-bold uppercase tracking-widest text-black transition-all hover:rotate-2 hover:bg-pink-500 hover:text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-white" href="#">
+                <span class="material-symbols-outlined">insights</span>
+                Pulse
+            </a>
+            <a class="flex items-center gap-3 border-2 border-black bg-white p-3 font-headline text-xs font-bold uppercase tracking-widest text-black transition-all hover:rotate-2 hover:bg-pink-500 hover:text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-white" href="#">
+                <span class="material-symbols-outlined">inventory_2</span>
+                Vault
+            </a>
+            <a class="flex items-center gap-3 border-2 border-black bg-white p-3 font-headline text-xs font-bold uppercase tracking-widest text-black transition-all hover:rotate-2 hover:bg-pink-500 hover:text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-white" href="#">
+                <span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+        </nav>
+        <div class="space-y-2 border-t-2 border-black/10 pt-4">
+            <button class="w-full border-2 border-black bg-primary py-3 font-headline text-xs font-black uppercase tracking-[0.2em] text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+                UPGRADE_NOW
+            </button>
+            <div class="mt-4 flex flex-col gap-1">
+                <a class="flex items-center gap-2 p-2 font-headline text-[10px] font-bold uppercase text-zinc-500 hover:text-pink-500" href="#">
+                    <span class="material-symbols-outlined text-sm">help_center</span>
+                    Support
+                </a>
+                <a class="flex items-center gap-2 p-2 font-headline text-[10px] font-bold uppercase text-zinc-500 hover:text-error" href="#">
+                    <span class="material-symbols-outlined text-sm">logout</span>
+                    Logout
+                </a>
             </div>
         </div>
+    </aside>
 
-        <div class="content-right">
-            <div class="card login-box">
-                <p>네이버를 더 안전하게 이용하세요</p>
-                <a href="#" class="login-btn">NAVER 로그인</a>
-                <div style="margin-top: 10px; font-size: 12px; color: #888;">
-                    <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a> | <a href="#">회원가입</a>
+    <main class="min-h-screen px-6 pb-12 pt-24 md:ml-64">
+        <section class="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-12">
+            <div class="relative overflow-hidden border-4 border-black bg-primary p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] lg:col-span-8">
+                <div class="relative z-10">
+                    <span class="sticker-rotate-1 mb-6 inline-block border-2 border-black bg-secondary-container px-3 py-1 font-headline text-xs font-black uppercase tracking-widest text-on-secondary-container">CURRENT_FLIGHT_PATH</span>
+                    <h1 class="mb-6 font-headline text-5xl font-black uppercase leading-none tracking-tighter text-white md:text-7xl">Lead Systems<br />Architect_2030</h1>
+                    <p class="mb-8 max-w-xl text-lg font-medium text-white/80">Orchestrating the fusion of neural networks and tactile digital interfaces for the next generation of creative suites.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="border-2 border-black bg-secondary-container px-6 py-3 font-headline font-black uppercase text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1 active:translate-y-1 active:shadow-none">EXECUTE_PLAN</button>
+                        <button class="border-2 border-black bg-white px-6 py-3 font-headline font-black uppercase text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1 active:translate-y-1 active:shadow-none">VIEW_MANIFESTO</button>
+                    </div>
+                </div>
+                <div class="absolute right-[-10%] top-[-10%] h-64 w-64 rotate-45 border-4 border-black bg-tertiary opacity-50"></div>
+                <div class="absolute bottom-[10%] right-[5%] h-32 w-32 rounded-full border-4 border-black bg-secondary-container"></div>
+            </div>
+
+            <div class="flex flex-col gap-6 lg:col-span-4">
+                <div class="border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_rgba(182,0,85,1)]">
+                    <div class="mb-4 flex items-start justify-between">
+                        <span class="font-headline text-xs font-black uppercase tracking-widest text-tertiary">PROMOTION_COUNTDOWN</span>
+                        <span class="material-symbols-outlined text-tertiary">timer</span>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-headline text-6xl font-black">42</span>
+                        <span class="font-headline text-xl font-bold uppercase">Days</span>
+                    </div>
+                    <div class="relative mt-4 h-4 border-2 border-black bg-surface-container">
+                        <div class="absolute left-0 top-0 h-full w-2/3 border-r-2 border-black bg-tertiary"></div>
+                    </div>
+                </div>
+
+                <div class="border-4 border-black bg-secondary-container p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                    <span class="mb-4 block font-headline text-xs font-black uppercase tracking-widest">SKILL_SYNTHESIS</span>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between font-headline text-sm font-bold uppercase">
+                            <span>Neural_Design</span>
+                            <span>98%</span>
+                        </li>
+                        <li class="flex justify-between font-headline text-sm font-bold uppercase">
+                            <span>Rapid_Prototyping</span>
+                            <span>84%</span>
+                        </li>
+                        <li class="flex justify-between font-headline text-sm font-bold uppercase">
+                            <span>Bio_Feedback_UI</span>
+                            <span>72%</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="card">
-                <h2>공지사항</h2>
-                <p style="font-size: 14px;">시스템 정기 점검 안내 (04/08)</p>
+        </section>
+
+        <section class="mb-16">
+            <div class="mb-8 flex items-end justify-between">
+                <div>
+                    <h2 class="font-headline text-4xl font-black uppercase tracking-tighter">Project_Vault</h2>
+                    <p class="text-sm font-bold opacity-60">ARCHIVED EXPLORATIONS &amp; ACTIVE VENTURES</p>
+                </div>
+                <button class="font-headline text-xs font-black uppercase underline decoration-4 underline-offset-4 decoration-primary transition-all hover:text-primary">VIEW_ALL_RECORDS</button>
             </div>
-        </div>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="group relative aspect-[3/4] overflow-hidden border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(8,70,237,1)] transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(8,70,237,1)]">
+                    <img class="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" alt="Cyber Noir Interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkEJaXnlpIMnLEMuVyo1Y0waFHs3F_kb-lyJS8eeef-cvE7MhaBa5Olm1sleoMLCwi7laR96eH304NHzSNI3e1DAWdckfoLI1e3vCe9Ow9L5aKARmws_hpQMGrYc1OlLwtySr_n3rEeF9HRcJTQl8I8AX2krqHVH1XmYOFa3REaJB1nUyo6qB7gj-kduGLYAhqDBSC5T0LtcZOOUHMSJAZtqmTwTpOs7_-DdTgvn0u0dd62g9edus8X29q7zu1SoIfpDmTrEFxAMJc" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <span class="sticker-rotate-1 mb-2 inline-block border-2 border-black bg-tertiary px-2 py-1 text-[10px] font-black text-white">RE_CODED_2030</span>
+                        <h3 class="font-headline text-2xl font-black uppercase leading-tight text-white">Cyber_Noir<br />Interface</h3>
+                    </div>
+                </div>
+
+                <div class="group relative aspect-[3/4] overflow-hidden border-4 border-black bg-secondary-container shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                    <img class="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" alt="Green Logic Node" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW54WZY_PE9z8rJvpay2CXnXputG9POJgDSuU4l_EPAgRYpSdIvY4WvFWuGrvSaW46_XxbzodHknzFViY90vdlw4rmZbwMgS3MmtC2TL5gRf3BtRlRYvhmSdWDAhaduJqRppb4Xy9_ZPGSgN4Ml2SCYyRZky5UNEe-Egb0_1DDwYWyk-PcDi7ABrkrkrrMdEjvv2wno5hkEFS_ZSiNJY_ZFO9150vn_7RlIPdFUqi5CN3mm1GQB1kRc957b24eIOT0gU8fKiAfd7YB" />
+                    <div class="absolute inset-0 bg-black/20 transition-colors group-hover:bg-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <span class="sticker-rotate-2 mb-2 inline-block border-2 border-black bg-primary px-2 py-1 text-[10px] font-black text-white">ACTIVE_ALPHA</span>
+                        <h3 class="font-headline text-2xl font-black uppercase leading-tight text-black">Green_Logic<br />Node</h3>
+                    </div>
+                </div>
+
+                <div class="group relative aspect-[3/4] overflow-hidden border-4 border-black bg-tertiary-container shadow-[8px_8px_0px_0px_rgba(182,0,85,1)] transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(182,0,85,1)]">
+                    <img class="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" alt="Retro Pulse Archive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp2ReGopLl7ZpuDJiEWN1Ej23nWLQDixHjXN7eMZqeLOfepglUWxqdPDA7j-0_nYE97kTeoaJdQNLJSyIe0ash_OLZULOURDjDug_m4s60jdI1BQZKXBgUVGPubCm59m57mRkEKaVQ1yY804XvXKl08RktjXsmEFg-1WRHny_K35Xuu-b45TTQqyboF3Ekt6rMJTaRKQVyc9btpu_sDhuLRLmfhRTO-M9-hmbV8qYYIAD7fXWh6Fxdc9XB_mk7--FP3l2a-c9aZJhW" />
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6">
+                        <span class="sticker-rotate-3 mb-2 inline-block border-2 border-black bg-secondary-container px-2 py-1 text-[10px] font-black text-black">EXPERIMENTAL</span>
+                        <h3 class="font-headline text-2xl font-black uppercase leading-tight text-white">Retro_Pulse<br />Archive</h3>
+                    </div>
+                </div>
+
+                <button class="group flex aspect-[3/4] flex-col items-center justify-center border-4 border-dashed border-black p-8 transition-colors hover:bg-surface-container">
+                    <span class="material-symbols-outlined text-6xl transition-transform group-hover:scale-125">add_circle</span>
+                    <span class="mt-4 font-headline text-lg font-black uppercase">MINT_NEW_ENTRY</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="mb-8 font-headline text-4xl font-black uppercase tracking-tighter">Sticker_Wall</h2>
+            <div class="relative flex min-h-[300px] flex-wrap items-center justify-center gap-8 overflow-hidden border-4 border-black bg-surface-container-highest p-10">
+                <div class="pointer-events-none absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+                <div class="neo-shadow sticker-rotate-1 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-white p-4 transition-transform hover:scale-110">
+                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-primary text-white">
+                        <span class="material-symbols-outlined text-4xl">school</span>
+                    </div>
+                    <span class="font-headline text-[10px] font-black uppercase">Master_Curator</span>
+                </div>
+
+                <div class="neo-shadow sticker-rotate-2 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-secondary-container p-4 transition-transform hover:scale-110">
+                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-white text-black">
+                        <span class="material-symbols-outlined text-4xl">verified</span>
+                    </div>
+                    <span class="font-headline text-[10px] font-black uppercase">Top_1%_Pulse</span>
+                </div>
+
+                <div class="neo-shadow sticker-rotate-3 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-tertiary p-4 transition-transform hover:scale-110">
+                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-white text-tertiary">
+                        <span class="material-symbols-outlined text-4xl">shield</span>
+                    </div>
+                    <span class="font-headline text-[10px] font-black uppercase text-white">Vault_Security</span>
+                </div>
+
+                <div class="neo-shadow sticker-rotate-1 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-primary p-4 transition-transform hover:scale-110">
+                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-lime-400 text-black">
+                        <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+                    </div>
+                    <span class="font-headline text-[10px] font-black uppercase text-white">Neural_Certified</span>
+                </div>
+
+                <div class="neo-shadow sticker-rotate-2 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-white p-4 transition-transform hover:scale-110">
+                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-black text-white">
+                        <span class="material-symbols-outlined text-4xl">workspace_premium</span>
+                    </div>
+                    <span class="font-headline text-[10px] font-black uppercase">Alpha_Contributor</span>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>이 페이지는 CI/CD 실습을 위해 제작된 모크업입니다. © 2026 Naver-Style Mockup.</p>
+    <footer class="flex w-full flex-col items-center justify-between gap-8 border-t-4 border-blue-700 bg-black px-8 py-12 dark:bg-white md:flex-row">
+        <div class="flex flex-col items-center md:items-start">
+            <span class="mb-2 font-headline text-lg font-black tracking-tighter text-white dark:text-black">KINETIC_CURATOR_LABS</span>
+            <p class="font-body text-sm font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-600">©2030 KINETIC_CURATOR_LABS</p>
+        </div>
+        <div class="flex gap-8 font-body text-sm font-medium uppercase tracking-widest">
+            <a class="text-zinc-400 transition-all hover:skew-x-2 hover:text-pink-500" href="#">Manifesto</a>
+            <a class="text-zinc-400 transition-all hover:skew-x-2 hover:text-pink-500" href="#">Protocol</a>
+            <a class="text-zinc-400 transition-all hover:skew-x-2 hover:text-pink-500" href="#">Frequency</a>
+        </div>
+        <div class="flex gap-4">
+            <button class="flex h-10 w-10 items-center justify-center border-2 border-primary bg-white transition-colors hover:bg-primary hover:text-white dark:bg-black">
+                <span class="material-symbols-outlined text-xl">share</span>
+            </button>
+            <button class="flex h-10 w-10 items-center justify-center border-2 border-primary bg-white transition-colors hover:bg-primary hover:text-white dark:bg-black">
+                <span class="material-symbols-outlined text-xl">terminal</span>
+            </button>
+        </div>
     </footer>
 
+    <button class="fixed bottom-8 right-8 z-50 flex h-16 w-16 items-center justify-center border-4 border-black bg-secondary-container shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none">
+        <span class="material-symbols-outlined text-4xl font-black">add</span>
+    </button>
 </body>
 </html>
