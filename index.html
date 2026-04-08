@@ -1,332 +1,305 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>KINETIC_CURATOR | STRAT_OS V2.0.30</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "inverse-on-surface": "#9c9d9d",
-                        "tertiary-container": "#ff8eac",
-                        "surface-container-low": "#f0f1f1",
-                        "primary-dim": "#003cd3",
-                        "tertiary-fixed-dim": "#ff769e",
-                        "surface-bright": "#f6f6f6",
-                        "background": "#f6f6f6",
-                        "on-primary-container": "#001867",
-                        "surface-dim": "#d2d5d5",
-                        "tertiary": "#b60055",
-                        "surface": "#f6f6f6",
-                        "surface-tint": "#0846ed",
-                        "surface-container": "#e7e8e8",
-                        "on-tertiary": "#ffeff1",
-                        "error-container": "#f74b6d",
-                        "secondary-dim": "#435600",
-                        "on-secondary-fixed": "#354500",
-                        "on-tertiary-fixed-variant": "#760035",
-                        "tertiary-fixed": "#ff8eac",
-                        "secondary-container": "#c3f400",
-                        "secondary-fixed-dim": "#b7e500",
-                        "on-secondary-fixed-variant": "#4e6300",
-                        "primary-fixed": "#859aff",
-                        "on-surface-variant": "#5a5c5c",
-                        "secondary-fixed": "#c3f400",
-                        "on-primary": "#f2f1ff",
-                        "outline-variant": "#acadad",
-                        "surface-container-highest": "#dbdddd",
-                        "on-secondary-container": "#455900",
-                        "on-background": "#2d2f2f",
-                        "on-tertiary-fixed": "#380015",
-                        "surface-variant": "#dbdddd",
-                        "inverse-surface": "#0c0f0f",
-                        "on-surface": "#2d2f2f",
-                        "on-secondary": "#e1ff88",
-                        "error": "#b41340",
-                        "on-error": "#ffefef",
-                        "on-error-container": "#510017",
-                        "primary-fixed-dim": "#718bff",
-                        "tertiary-dim": "#a0004a",
-                        "primary-container": "#859aff",
-                        "outline": "#757777",
-                        "error-dim": "#a70138",
-                        "primary": "#0846ed",
-                        "on-tertiary-container": "#66002d",
-                        "surface-container-high": "#e1e3e3"
-                    },
-                    fontFamily: {
-                        headline: ["Space Grotesk", "sans-serif"],
-                        body: ["Plus Jakarta Sans", "sans-serif"],
-                        label: ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        DEFAULT: "0rem",
-                        lg: "0rem",
-                        xl: "0rem",
-                        full: "9999px"
-                    }
-                }
-            }
-        };
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CAREER STAGE | Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#393939",
+              "on-error": "#690005",
+              "on-surface": "#e2e2e2",
+              "on-error-container": "#ffdad6",
+              "surface-tint": "#ffb4aa",
+              "secondary": "#ffb4aa",
+              "tertiary-fixed-dim": "#a7c8ff",
+              "outline": "#af8782",
+              "tertiary": "#a7c8ff",
+              "on-primary-container": "#fff7f6",
+              "tertiary-fixed": "#d5e3ff",
+              "surface-variant": "#353535",
+              "on-primary-fixed-variant": "#930007",
+              "on-secondary-fixed": "#410001",
+              "secondary-fixed-dim": "#ffb4aa",
+              "on-surface-variant": "#e9bcb6",
+              "outline-variant": "#5e3f3b",
+              "on-secondary": "#690003",
+              "primary-container": "#e50914",
+              "background": "#131313",
+              "surface-container": "#1f1f1f",
+              "on-background": "#e2e2e2",
+              "inverse-on-surface": "#303030",
+              "inverse-primary": "#c0000c",
+              "on-primary": "#690003",
+              "on-tertiary-fixed": "#001b3c",
+              "on-tertiary-container": "#f8f9ff",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-low": "#1b1b1b",
+              "primary": "#ffb4aa",
+              "inverse-surface": "#e2e2e2",
+              "error-container": "#93000a",
+              "on-primary-fixed": "#410001",
+              "surface-container-lowest": "#0e0e0e",
+              "surface": "#131313",
+              "on-secondary-fixed-variant": "#8e1210",
+              "secondary-fixed": "#ffdad5",
+              "surface-container-highest": "#353535",
+              "tertiary-container": "#0072d7",
+              "on-tertiary-fixed-variant": "#004689",
+              "error": "#ffb4ab",
+              "primary-fixed-dim": "#ffb4aa",
+              "surface-dim": "#131313",
+              "primary-fixed": "#ffdad5",
+              "secondary-container": "#921512",
+              "on-tertiary": "#003061",
+              "on-secondary-container": "#ff9f93"
+            },
+            fontFamily: {
+              "headline": ["Be Vietnam Pro"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
     </script>
-    <style>
+<style>
         .material-symbols-outlined {
-            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-            vertical-align: middle;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-
-        .neo-shadow {
-            box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
-        }
-
-        .sticker-rotate-1 {
-            transform: rotate(-2deg);
-        }
-
-        .sticker-rotate-2 {
-            transform: rotate(3deg);
-        }
-
-        .sticker-rotate-3 {
-            transform: rotate(-1.5deg);
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .text-shadow-hero { text-shadow: 0 4px 12px rgba(0,0,0,0.8); }
+        .spotlight-gradient {
+            background: radial-gradient(circle at center, rgba(229, 9, 20, 0.15) 0%, rgba(19, 19, 19, 0) 70%);
         }
     </style>
 </head>
-<body class="bg-background font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
-    <nav class="fixed top-0 z-50 flex h-20 w-full items-center justify-between border-b-4 border-black bg-white px-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-zinc-900">
-        <div class="flex items-center gap-8">
-            <span class="font-headline text-3xl font-black italic tracking-tighter text-blue-700 dark:text-blue-500">KINETIC_CURATOR</span>
-            <div class="hidden items-center gap-6 md:flex">
-                <a class="border-b-4 border-blue-700 pb-1 font-headline font-bold uppercase tracking-tight text-blue-700 dark:border-blue-400 dark:text-blue-400" href="#">Dashboard</a>
-                <a class="font-headline font-bold uppercase tracking-tight text-black opacity-80 transition-colors duration-100 hover:bg-lime-400 hover:text-black dark:text-white" href="#">Network</a>
-                <a class="font-headline font-bold uppercase tracking-tight text-black opacity-80 transition-colors duration-100 hover:bg-lime-400 hover:text-black dark:text-white" href="#">Ventures</a>
-            </div>
-        </div>
-        <div class="flex items-center gap-4">
-            <button class="border-2 border-transparent p-2 transition-all hover:border-black hover:bg-lime-400">
-                <span class="material-symbols-outlined">bolt</span>
-            </button>
-            <button class="border-2 border-transparent p-2 transition-all hover:border-black hover:bg-lime-400">
-                <span class="material-symbols-outlined">notifications</span>
-            </button>
-            <div class="h-10 w-10 overflow-hidden border-2 border-black">
-                <img
-                    alt="User Profile Avatar"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZJ1M6J1inFHfAWZx3xJ3mtBOhhTV_Q8R-9xXmjKIAhSwTWuuPwSwvOaQCrpaJ8FYevrLfASNW87MKEjviOEwvTUZ4Ie-prL9eQwLpy8ysY5esJ1ZzFwuHX40qlMOjDomfODfwcvMFTC3dAXbrzoLdiPVZ46O5_jMY0yQYBjT3YJ1Cb35Z9nr6c-4tAFB3vGVniI2qDak3rQWzsEKfJgLlVJHhx-M24Ud_uSDd3UUaYvU_02f1Q9SPzZ9xfZOHuZcQGyBkPStCKEzt"
-                />
-            </div>
-        </div>
-    </nav>
-
-    <aside class="fixed left-0 top-20 z-40 hidden h-[calc(100vh-80px)] w-64 flex-col space-y-4 border-r-4 border-black bg-[#f6f6f6] p-4 dark:border-white dark:bg-zinc-950 md:flex">
-        <div class="mb-6">
-            <h2 class="font-headline text-xl font-black text-black dark:text-white">STRAT_OS</h2>
-            <span class="font-headline text-[10px] font-bold uppercase tracking-widest opacity-60">V2.0.30</span>
-        </div>
-        <nav class="flex flex-1 flex-col gap-2">
-            <a class="flex scale-105 rotate-[-2deg] items-center gap-3 bg-lime-400 p-3 font-headline text-xs font-bold uppercase tracking-widest text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-transform duration-75" href="#">
-                <span class="material-symbols-outlined">trending_up</span>
-                Growth
-            </a>
-            <a class="flex items-center gap-3 border-2 border-black bg-white p-3 font-headline text-xs font-bold uppercase tracking-widest text-black transition-all hover:rotate-2 hover:bg-pink-500 hover:text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-white" href="#">
-                <span class="material-symbols-outlined">electric_bolt</span>
-                Vibe
-            </a>
-            <a class="flex items-center gap-3 border-2 border-black bg-white p-3 font-headline text-xs font-bold uppercase tracking-widest text-black transition-all hover:rotate-2 hover:bg-pink-500 hover:text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-white" href="#">
-                <span class="material-symbols-outlined">insights</span>
-                Pulse
-            </a>
-            <a class="flex items-center gap-3 border-2 border-black bg-white p-3 font-headline text-xs font-bold uppercase tracking-widest text-black transition-all hover:rotate-2 hover:bg-pink-500 hover:text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-white" href="#">
-                <span class="material-symbols-outlined">inventory_2</span>
-                Vault
-            </a>
-            <a class="flex items-center gap-3 border-2 border-black bg-white p-3 font-headline text-xs font-bold uppercase tracking-widest text-black transition-all hover:rotate-2 hover:bg-pink-500 hover:text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-white" href="#">
-                <span class="material-symbols-outlined">settings</span>
-                Settings
-            </a>
-        </nav>
-        <div class="space-y-2 border-t-2 border-black/10 pt-4">
-            <button class="w-full border-2 border-black bg-primary py-3 font-headline text-xs font-black uppercase tracking-[0.2em] text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
-                UPGRADE_NOW
-            </button>
-            <div class="mt-4 flex flex-col gap-1">
-                <a class="flex items-center gap-2 p-2 font-headline text-[10px] font-bold uppercase text-zinc-500 hover:text-pink-500" href="#">
-                    <span class="material-symbols-outlined text-sm">help_center</span>
-                    Support
-                </a>
-                <a class="flex items-center gap-2 p-2 font-headline text-[10px] font-bold uppercase text-zinc-500 hover:text-error" href="#">
-                    <span class="material-symbols-outlined text-sm">logout</span>
-                    Logout
-                </a>
-            </div>
-        </div>
-    </aside>
-
-    <main class="min-h-screen px-6 pb-12 pt-24 md:ml-64">
-        <section class="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-12">
-            <div class="relative overflow-hidden border-4 border-black bg-primary p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] lg:col-span-8">
-                <div class="relative z-10">
-                    <span class="sticker-rotate-1 mb-6 inline-block border-2 border-black bg-secondary-container px-3 py-1 font-headline text-xs font-black uppercase tracking-widest text-on-secondary-container">CURRENT_FLIGHT_PATH</span>
-                    <h1 class="mb-6 font-headline text-5xl font-black uppercase leading-none tracking-tighter text-white md:text-7xl">Lead Systems<br />Architect_2030</h1>
-                    <p class="mb-8 max-w-xl text-lg font-medium text-white/80">Orchestrating the fusion of neural networks and tactile digital interfaces for the next generation of creative suites.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <button class="border-2 border-black bg-secondary-container px-6 py-3 font-headline font-black uppercase text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1 active:translate-y-1 active:shadow-none">EXECUTE_PLAN</button>
-                        <button class="border-2 border-black bg-white px-6 py-3 font-headline font-black uppercase text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-1 active:translate-y-1 active:shadow-none">VIEW_MANIFESTO</button>
-                    </div>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-zinc-950/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 w-full">
+<div class="flex items-center gap-12">
+<h1 class="text-2xl font-black tracking-tighter text-red-600 font-headline">CAREER STAGE</h1>
+<nav class="hidden md:flex gap-6 font-['Be_Vietnam_Pro'] tracking-tight text-sm font-medium uppercase">
+<a class="text-white font-bold border-b-2 border-red-600 pb-1" href="#">Browse</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-200 transition-colors hover:text-white transition-all duration-300" href="#">My Projects</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-200 transition-colors hover:text-white transition-all duration-300" href="#">Learning Path</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-200 transition-colors hover:text-white transition-all duration-300" href="#">Certifications</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-200 transition-colors hover:text-white transition-all duration-300" href="#">Mentorship</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 text-sm">search</span>
+<input class="bg-surface-container-lowest border-0 border-b border-white/10 focus:border-red-600 focus:ring-0 text-xs py-2 pl-10 pr-4 w-64 transition-all" placeholder="Titles, Skills, Roles" type="text"/>
+</div>
+<button class="text-zinc-400 hover:text-white transition-transform scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-sm bg-surface-container-highest overflow-hidden cursor-pointer border border-white/10">
+<img alt="User profile avatar" data-alt="close-up portrait of a professional man with a friendly expression in a modern office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKdHb5jdtKaNjf-mnjUL57CE3aF8dASFk40mWjro2iRT9TRSHN-a0rGkAOt6dacXtupQhtITg1H1WL_vuMY-p0fQ6gsymEbJrlNkBDiJDB1aj-KBknt5UYJlu-bW8j5IewUFavbQ0iwVuJpVL0ifc3MpIF92bq395qcAbIMcBuVu7Jv12wQIw2x8YXRO7G8h3BSKrGeLyw4NctQBTgDvYEor1vCRhKETcDCScLs-75GE0VJqF6ElstMJUq_ivL0uqPKlxnug_DmX29"/>
+</div>
+</div>
+</header>
+<!-- Main Content Stage -->
+<main class="pt-20 pb-24 md:pb-0 min-h-screen">
+<!-- Hero Spotlight Section -->
+<section class="relative h-[716px] w-full flex items-center px-8 md:px-16 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="dramatic wide shot of a futuristic sleek office building at dusk with glowing red interior lights and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFCdBzVr-0JOoidLnyY5LDlqvrlkqOVW408lioZkefH2yU1NCVu5VlEe6nbZ7dH4P344hWIg-1mDIPsW4zXPG3qYX4niNYLgpOmQGvzW2ESCzLFVaUMoHmpxDCjojoq9STnZ9KiaIi47x-etUdG5m61D_pfTzijyQ52i3Reb9LiB3AK85-ndcnpVu07gUNa19nLT_Rj2ZhU60znuzENMhnc2mz1GXLm8NN57HiAXQUGBWceOdWzXAZPbVBFX1VDxKPiCS3i56m8lka"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl space-y-6">
+<div class="flex items-center gap-2 text-primary-container font-black tracking-[0.3em] text-xs uppercase">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+                    Trending Career Path
                 </div>
-                <div class="absolute right-[-10%] top-[-10%] h-64 w-64 rotate-45 border-4 border-black bg-tertiary opacity-50"></div>
-                <div class="absolute bottom-[10%] right-[5%] h-32 w-32 rounded-full border-4 border-black bg-secondary-container"></div>
-            </div>
-
-            <div class="flex flex-col gap-6 lg:col-span-4">
-                <div class="border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_rgba(182,0,85,1)]">
-                    <div class="mb-4 flex items-start justify-between">
-                        <span class="font-headline text-xs font-black uppercase tracking-widest text-tertiary">PROMOTION_COUNTDOWN</span>
-                        <span class="material-symbols-outlined text-tertiary">timer</span>
-                    </div>
-                    <div class="flex items-baseline gap-2">
-                        <span class="font-headline text-6xl font-black">42</span>
-                        <span class="font-headline text-xl font-bold uppercase">Days</span>
-                    </div>
-                    <div class="relative mt-4 h-4 border-2 border-black bg-surface-container">
-                        <div class="absolute left-0 top-0 h-full w-2/3 border-r-2 border-black bg-tertiary"></div>
-                    </div>
-                </div>
-
-                <div class="border-4 border-black bg-secondary-container p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                    <span class="mb-4 block font-headline text-xs font-black uppercase tracking-widest">SKILL_SYNTHESIS</span>
-                    <ul class="space-y-2">
-                        <li class="flex justify-between font-headline text-sm font-bold uppercase">
-                            <span>Neural_Design</span>
-                            <span>98%</span>
-                        </li>
-                        <li class="flex justify-between font-headline text-sm font-bold uppercase">
-                            <span>Rapid_Prototyping</span>
-                            <span>84%</span>
-                        </li>
-                        <li class="flex justify-between font-headline text-sm font-bold uppercase">
-                            <span>Bio_Feedback_UI</span>
-                            <span>72%</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-16">
-            <div class="mb-8 flex items-end justify-between">
-                <div>
-                    <h2 class="font-headline text-4xl font-black uppercase tracking-tighter">Project_Vault</h2>
-                    <p class="text-sm font-bold opacity-60">ARCHIVED EXPLORATIONS &amp; ACTIVE VENTURES</p>
-                </div>
-                <button class="font-headline text-xs font-black uppercase underline decoration-4 underline-offset-4 decoration-primary transition-all hover:text-primary">VIEW_ALL_RECORDS</button>
-            </div>
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                <div class="group relative aspect-[3/4] overflow-hidden border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(8,70,237,1)] transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(8,70,237,1)]">
-                    <img class="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" alt="Cyber Noir Interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkEJaXnlpIMnLEMuVyo1Y0waFHs3F_kb-lyJS8eeef-cvE7MhaBa5Olm1sleoMLCwi7laR96eH304NHzSNI3e1DAWdckfoLI1e3vCe9Ow9L5aKARmws_hpQMGrYc1OlLwtySr_n3rEeF9HRcJTQl8I8AX2krqHVH1XmYOFa3REaJB1nUyo6qB7gj-kduGLYAhqDBSC5T0LtcZOOUHMSJAZtqmTwTpOs7_-DdTgvn0u0dd62g9edus8X29q7zu1SoIfpDmTrEFxAMJc" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-6">
-                        <span class="sticker-rotate-1 mb-2 inline-block border-2 border-black bg-tertiary px-2 py-1 text-[10px] font-black text-white">RE_CODED_2030</span>
-                        <h3 class="font-headline text-2xl font-black uppercase leading-tight text-white">Cyber_Noir<br />Interface</h3>
-                    </div>
-                </div>
-
-                <div class="group relative aspect-[3/4] overflow-hidden border-4 border-black bg-secondary-container shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-                    <img class="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" alt="Green Logic Node" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW54WZY_PE9z8rJvpay2CXnXputG9POJgDSuU4l_EPAgRYpSdIvY4WvFWuGrvSaW46_XxbzodHknzFViY90vdlw4rmZbwMgS3MmtC2TL5gRf3BtRlRYvhmSdWDAhaduJqRppb4Xy9_ZPGSgN4Ml2SCYyRZky5UNEe-Egb0_1DDwYWyk-PcDi7ABrkrkrrMdEjvv2wno5hkEFS_ZSiNJY_ZFO9150vn_7RlIPdFUqi5CN3mm1GQB1kRc957b24eIOT0gU8fKiAfd7YB" />
-                    <div class="absolute inset-0 bg-black/20 transition-colors group-hover:bg-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-6">
-                        <span class="sticker-rotate-2 mb-2 inline-block border-2 border-black bg-primary px-2 py-1 text-[10px] font-black text-white">ACTIVE_ALPHA</span>
-                        <h3 class="font-headline text-2xl font-black uppercase leading-tight text-black">Green_Logic<br />Node</h3>
-                    </div>
-                </div>
-
-                <div class="group relative aspect-[3/4] overflow-hidden border-4 border-black bg-tertiary-container shadow-[8px_8px_0px_0px_rgba(182,0,85,1)] transition-all hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(182,0,85,1)]">
-                    <img class="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0" alt="Retro Pulse Archive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp2ReGopLl7ZpuDJiEWN1Ej23nWLQDixHjXN7eMZqeLOfepglUWxqdPDA7j-0_nYE97kTeoaJdQNLJSyIe0ash_OLZULOURDjDug_m4s60jdI1BQZKXBgUVGPubCm59m57mRkEKaVQ1yY804XvXKl08RktjXsmEFg-1WRHny_K35Xuu-b45TTQqyboF3Ekt6rMJTaRKQVyc9btpu_sDhuLRLmfhRTO-M9-hmbV8qYYIAD7fXWh6Fxdc9XB_mk7--FP3l2a-c9aZJhW" />
-                    <div class="absolute inset-0 bg-black/20"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-6">
-                        <span class="sticker-rotate-3 mb-2 inline-block border-2 border-black bg-secondary-container px-2 py-1 text-[10px] font-black text-black">EXPERIMENTAL</span>
-                        <h3 class="font-headline text-2xl font-black uppercase leading-tight text-white">Retro_Pulse<br />Archive</h3>
-                    </div>
-                </div>
-
-                <button class="group flex aspect-[3/4] flex-col items-center justify-center border-4 border-dashed border-black p-8 transition-colors hover:bg-surface-container">
-                    <span class="material-symbols-outlined text-6xl transition-transform group-hover:scale-125">add_circle</span>
-                    <span class="mt-4 font-headline text-lg font-black uppercase">MINT_NEW_ENTRY</span>
-                </button>
-            </div>
-        </section>
-
-        <section class="mb-16">
-            <h2 class="mb-8 font-headline text-4xl font-black uppercase tracking-tighter">Sticker_Wall</h2>
-            <div class="relative flex min-h-[300px] flex-wrap items-center justify-center gap-8 overflow-hidden border-4 border-black bg-surface-container-highest p-10">
-                <div class="pointer-events-none absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 20px 20px;"></div>
-
-                <div class="neo-shadow sticker-rotate-1 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-white p-4 transition-transform hover:scale-110">
-                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-primary text-white">
-                        <span class="material-symbols-outlined text-4xl">school</span>
-                    </div>
-                    <span class="font-headline text-[10px] font-black uppercase">Master_Curator</span>
-                </div>
-
-                <div class="neo-shadow sticker-rotate-2 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-secondary-container p-4 transition-transform hover:scale-110">
-                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-white text-black">
-                        <span class="material-symbols-outlined text-4xl">verified</span>
-                    </div>
-                    <span class="font-headline text-[10px] font-black uppercase">Top_1%_Pulse</span>
-                </div>
-
-                <div class="neo-shadow sticker-rotate-3 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-tertiary p-4 transition-transform hover:scale-110">
-                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-white text-tertiary">
-                        <span class="material-symbols-outlined text-4xl">shield</span>
-                    </div>
-                    <span class="font-headline text-[10px] font-black uppercase text-white">Vault_Security</span>
-                </div>
-
-                <div class="neo-shadow sticker-rotate-1 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-primary p-4 transition-transform hover:scale-110">
-                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-lime-400 text-black">
-                        <span class="material-symbols-outlined text-4xl">auto_awesome</span>
-                    </div>
-                    <span class="font-headline text-[10px] font-black uppercase text-white">Neural_Certified</span>
-                </div>
-
-                <div class="neo-shadow sticker-rotate-2 flex cursor-help flex-col items-center gap-2 border-2 border-black bg-white p-4 transition-transform hover:scale-110">
-                    <div class="flex h-16 w-16 items-center justify-center border-2 border-black bg-black text-white">
-                        <span class="material-symbols-outlined text-4xl">workspace_premium</span>
-                    </div>
-                    <span class="font-headline text-[10px] font-black uppercase">Alpha_Contributor</span>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="flex w-full flex-col items-center justify-between gap-8 border-t-4 border-blue-700 bg-black px-8 py-12 dark:bg-white md:flex-row">
-        <div class="flex flex-col items-center md:items-start">
-            <span class="mb-2 font-headline text-lg font-black tracking-tighter text-white dark:text-black">KINETIC_CURATOR_LABS</span>
-            <p class="font-body text-sm font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-600">©2030 KINETIC_CURATOR_LABS</p>
-        </div>
-        <div class="flex gap-8 font-body text-sm font-medium uppercase tracking-widest">
-            <a class="text-zinc-400 transition-all hover:skew-x-2 hover:text-pink-500" href="#">Manifesto</a>
-            <a class="text-zinc-400 transition-all hover:skew-x-2 hover:text-pink-500" href="#">Protocol</a>
-            <a class="text-zinc-400 transition-all hover:skew-x-2 hover:text-pink-500" href="#">Frequency</a>
-        </div>
-        <div class="flex gap-4">
-            <button class="flex h-10 w-10 items-center justify-center border-2 border-primary bg-white transition-colors hover:bg-primary hover:text-white dark:bg-black">
-                <span class="material-symbols-outlined text-xl">share</span>
-            </button>
-            <button class="flex h-10 w-10 items-center justify-center border-2 border-primary bg-white transition-colors hover:bg-primary hover:text-white dark:bg-black">
-                <span class="material-symbols-outlined text-xl">terminal</span>
-            </button>
-        </div>
-    </footer>
-
-    <button class="fixed bottom-8 right-8 z-50 flex h-16 w-16 items-center justify-center border-4 border-black bg-secondary-container shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none">
-        <span class="material-symbols-outlined text-4xl font-black">add</span>
-    </button>
-</body>
-</html>
+<h2 class="text-5xl md:text-7xl font-black font-headline tracking-tighter leading-[0.9] text-shadow-hero uppercase">
+                    Senior Systems <br/><span class="text-red-600">Architect</span>
+</h2>
+<div class="flex items-center gap-4 text-sm font-medium">
+<span class="text-green-500 font-bold">98% Match</span>
+<span class="text-zinc-400">2024</span>
+<span class="px-1.5 py-0.5 border border-zinc-600 text-[10px] text-zinc-400 rounded-sm">ADVANCED</span>
+<span class="text-zinc-400">High Growth</span>
+</div>
+<p class="text-lg text-zinc-300 max-w-lg leading-relaxed font-medium">
+                    Master the orchestration of complex cloud ecosystems. This path covers high-availability designs, microservices, and distributed ledger integration.
+                </p>
+<div class="flex items-center gap-4 pt-4">
+<button class="flex items-center gap-2 bg-white text-black px-8 py-3 rounded-sm font-bold text-lg hover:bg-zinc-200 transition-all active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Continue Learning
+                    </button>
+<button class="flex items-center gap-2 bg-zinc-500/30 backdrop-blur-md text-white px-8 py-3 rounded-sm font-bold text-lg hover:bg-zinc-500/50 transition-all active:scale-95">
+<span class="material-symbols-outlined">info</span>
+                        More Details
+                    </button>
+</div>
+</div>
+</section>
+<!-- Dynamic Stats & KPI Grid (Bento Style) -->
+<section class="px-8 md:px-16 -mt-20 relative z-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-low/80 backdrop-blur-md p-6 rounded-sm border-l-4 border-red-600 shadow-2xl">
+<p class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">D-Day Countdown</p>
+<h3 class="text-4xl font-black font-headline text-red-600 tracking-tighter">14 DAYS</h3>
+<p class="text-xs text-zinc-400 mt-2">Next Milestone: AWS Professional Cert</p>
+</div>
+<div class="bg-surface-container-low/80 backdrop-blur-md p-6 rounded-sm shadow-2xl">
+<p class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Daily Skill Rate</p>
+<div class="flex items-end gap-2">
+<h3 class="text-4xl font-black font-headline text-white tracking-tighter">+4.2%</h3>
+<span class="material-symbols-outlined text-green-500 mb-1">trending_up</span>
+</div>
+<div class="w-full bg-zinc-800 h-1 mt-4">
+<div class="bg-red-600 h-1 w-[72%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-low/80 backdrop-blur-md p-6 rounded-sm shadow-2xl">
+<p class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Learning Hours</p>
+<h3 class="text-4xl font-black font-headline text-white tracking-tighter">128.5</h3>
+<p class="text-xs text-zinc-400 mt-2">Top 5% of all users this month</p>
+</div>
+<div class="bg-surface-container-low/80 backdrop-blur-md p-6 rounded-sm shadow-2xl flex flex-col justify-between">
+<p class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Global Rank</p>
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 bg-red-600/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-red-600" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<h3 class="text-2xl font-black font-headline text-white">#1,204</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Posters Carousel -->
+<section class="mt-16 pb-12">
+<div class="flex items-center justify-between px-8 md:px-16 mb-6">
+<h3 class="text-2xl font-bold font-headline tracking-tight">Active Projects</h3>
+<a class="text-red-600 text-xs font-bold uppercase tracking-widest hover:underline" href="#">View All</a>
+</div>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar px-8 md:px-16 snap-x">
+<!-- Project Poster 1 -->
+<div class="flex-none w-64 md:w-80 group cursor-pointer snap-start">
+<div class="aspect-[2/3] relative rounded-md overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02] group-hover:z-30">
+<img class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" data-alt="high-tech computer code on multiple monitors in a dimly lit server room with vibrant blue and red glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoUsVbVkeDLOPYucK4-U9cRkMOBJ04VN_Kk-nfvtSL9a-Y2ZzyU6SAttRa14l6C_8rMwqy1BUw4oeIHSIp4aY6GMhxgpNnkKDSx6Bkgdmh5cMaHHGh9Y8Sdnftmdm3ZlCUEMGhR1e7SenmAlbQHjO_Cm9TNhLvujNUp8pztSEje0EAm08UAwB9Dfbc_m1hZwVcZktXB-7D8qHoj-oESoUfuIrFDLOjIO1loji1mXFBitADkJPevTpRqRdXbGpZIwRe-qbdag_S2FxN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 p-6 w-full transform transition-all group-hover:translate-y-[-10px]">
+<div class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 inline-block mb-2 rounded-sm uppercase tracking-tighter">Project Alpha</div>
+<h4 class="text-xl font-bold font-headline mb-1">Legacy Migration</h4>
+<p class="text-xs text-zinc-400 line-clamp-1">Refactoring monolith to microservices architecture.</p>
+</div>
+</div>
+</div>
+<!-- Project Poster 2 -->
+<div class="flex-none w-64 md:w-80 group cursor-pointer snap-start">
+<div class="aspect-[2/3] relative rounded-md overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02] group-hover:z-30">
+<img class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" data-alt="abstract close-up of computer circuit board with glowing golden traces and futuristic energy pulses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqc_wvDxvy3xkqjrQmKnYZzP_auq2VKwfO9BRrYKdKLpC1izez7TdwjNhHLBmOc30otM94i6_ubb1w_f8aYONonz2yzVxn5SMPFt8RiUHybF6K3sa20ras9kBVDXnRM3tGnmtPkEqz78VgmQb6Pkhlj4MwJBCPEXsTb2vH8axME_rI3HYUNubvOzMFLwC01x_5C9kYO6SeiG_IBhbhYye3GYUgs072YGg85jriIQW3ltOyPkJjV1Lg7rBROtvRLFoEcs8rkW31Urvr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 p-6 w-full transform transition-all group-hover:translate-y-[-10px]">
+<div class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 inline-block mb-2 rounded-sm uppercase tracking-tighter">Edge Case</div>
+<h4 class="text-xl font-bold font-headline mb-1">IoT Data Pipeline</h4>
+<p class="text-xs text-zinc-400 line-clamp-1">Real-time processing for 10k+ edge devices.</p>
+</div>
+</div>
+</div>
+<!-- Project Poster 3 -->
+<div class="flex-none w-64 md:w-80 group cursor-pointer snap-start">
+<div class="aspect-[2/3] relative rounded-md overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02] group-hover:z-30">
+<img class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" data-alt="ultra-modern laptop with a sleek metallic finish reflecting neon lights in a dark creative studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9YytciUZB93e2pczkfX0kCqGNcfB0ob69_CEktp4eeBNK_JbD-gnzP7c0nOFv_j9TkuAYCnz7yeskxvGqS3PjAwOksZ6dL5nqXUccsMIr9fpeCfR1MayTyPB0mHyVf_-Lg_3MxvPU6NHRqoFi3HWspeg6T5F7qzmJYmz6kXwwmnTYLWGpOh2P3PJXT063SixgJ6pzzQuVnAv-dzq5LlEviIaDJ5AQ_R65c3BKteg5WJ3inmF3Dl6AxpYScGvAmZpwcCde5A7yuv4k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 p-6 w-full transform transition-all group-hover:translate-y-[-10px]">
+<div class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 inline-block mb-2 rounded-sm uppercase tracking-tighter">New Series</div>
+<h4 class="text-xl font-bold font-headline mb-1">Quantum Interface</h4>
+<p class="text-xs text-zinc-400 line-clamp-1">Designing UI paradigms for quantum computing labs.</p>
+</div>
+</div>
+</div>
+<!-- Project Poster 4 -->
+<div class="flex-none w-64 md:w-80 group cursor-pointer snap-start">
+<div class="aspect-[2/3] relative rounded-md overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02] group-hover:z-30">
+<img class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" data-alt="orbital view of earth at night with illuminated city networks and deep blue oceanic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUsUuMGCdoY887LvzGtFKUMJWWoUeJze5XUusQEe7d6RgmAAN9LevhaUoyulfw6Nxpz7tKjMHEGnrvqHrFa4et-MsG0XBsxHOz2fElO_Dso4IVRpyOOONQd9KegKo0sn1EMRbJcu4o43ZiVe_vMtBv5kLenvsJ0SJHcDxdi5R9Kk9VjVQVYoPNBTvvDfqUnolkhbuEqGFKVMNSxj2Pmcg426_zRYHVG_e7QD1WDNMzX-3StMgz_hGkXS4C6EXUTrjAVCMXzOhJxCNp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 p-6 w-full transform transition-all group-hover:translate-y-[-10px]">
+<div class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 inline-block mb-2 rounded-sm uppercase tracking-tighter">Global Net</div>
+<h4 class="text-xl font-bold font-headline mb-1">CDN Optimization</h4>
+<p class="text-xs text-zinc-400 line-clamp-1">Latency reduction for worldwide content delivery.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certification List (Editorial Layout) -->
+<section class="px-8 md:px-16 mt-8 pb-32">
+<h3 class="text-2xl font-bold font-headline tracking-tight mb-8">My Certifications</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-6 p-4 rounded-sm hover:bg-surface-container-high transition-all group cursor-pointer">
+<div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-3xl text-red-600">verified</span>
+</div>
+<div class="flex-1">
+<h4 class="text-lg font-bold">AWS Certified Solutions Architect</h4>
+<p class="text-sm text-zinc-400">Professional Level · Issued Jan 2024</p>
+</div>
+<div class="hidden md:flex flex-col items-end">
+<span class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Expires</span>
+<span class="text-sm font-bold text-white">Jan 2027</span>
+</div>
+<button class="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="flex items-center gap-6 p-4 rounded-sm hover:bg-surface-container-high transition-all group cursor-pointer">
+<div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-3xl text-zinc-500">pending</span>
+</div>
+<div class="flex-1">
+<h4 class="text-lg font-bold">Google Cloud Professional Architect</h4>
+<div class="flex items-center gap-4 mt-1">
+<div class="w-32 bg-zinc-800 h-1 rounded-full overflow-hidden">
+<div class="bg-red-600 h-1 w-[85%]"></div>
+</div>
+<span class="text-[10px] font-bold text-red-600 uppercase">85% Complete</span>
+</div>
+</div>
+<div class="hidden md:flex flex-col items-end">
+<span class="text-xs font-bold text-zinc-500 uppercase tracking-widest">In Progress</span>
+<span class="text-sm font-bold text-white">ETA Feb 15</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center transition-all scale-95 hover:scale-105">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Mobile Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center py-3 pb-safe bg-zinc-950/80 backdrop-blur-lg shadow-[0_-4px_20px_rgba(0,0,0,0.5)] md:hidden z-50">
+<div class="flex flex-col items-center justify-center text-red-500 scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">My List</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</div>
+</nav>
+</body></html>
